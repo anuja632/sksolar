@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Ensure consistent rendering on mobile devices -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<!-- Optional but recommended -->
+<meta name="format-detection" content="telephone=no">
+  <title>SKsolar|Services</title>
+
+  <!-- Bootstrap 5.3.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+  <!-- Owl Carousel CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<style>
+  .quote-btn {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    margin-left: 15px;
+    border-radius: 4px;
+  }
+
+  @media (max-width: 991.98px) {
+    .dropdown-menu {
+      position: static !important;
+      float: none;
+      width: 100%;
+      margin-top: 0;
+      border: none;
+      box-shadow: none;
+      display: none; /* hide initially */
+    }
+
+    .dropdown.show .dropdown-menu {
+      display: block; /* show when active */
+    }
+  }
+</style>
+
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar fixed-top">
+    <div class="contact-info">
+      <span>
+        <img src="css/images/phone.png" alt="Phone" id="phn" loading="lazy">
+        <a href="tel:9944252489">99442 52489</a> | <a href="tel:7338844707">73388 44707</a>
+      </span>
+      <span>
+        <img src="css/images/Vector (4).png" alt="Email"id="email"loading="lazy" >
+        <a href="mailto:sksolardgl@gmail.com">sksolardgl@gmail.com</a>
+      </span>
+    </div>
+    <div class="social-icond">
+      <a href="https://www.facebook.com/p/SK-Solar-Dindigul-100086481907261/" target="_blank">
+        <img src="css/images/Facebook r.png" alt="Facebook" id="facebook"  loading="lazy">
+      </a>
+      <a href="https://wa.me/919944252489" target="_blank">
+        <img src="css/images/whatsappr.png" alt="WhatsApp" id="whatsapp"loading="lazy" >
+      </a>
+      <a href="https://www.instagram.com/sksolardgl/">
+        <img src="css/images/Instagramr.png" alt="Instagram" id="insta" loading="lazy">
+      </a>
+    </div>
+  </div>  
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top pt-5">
+    <div class="container-fluid" id="al">
+      <div class="logo">
+        <img src="css/images/logo-100.jpg" alt="Logo" class="logo"loading="lazy" >
+      </div>
+      <!-- Navbar toggler for mobile screens -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Navbar items -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link text-uppercase">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link text-uppercase">About</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-uppercase" href="#" id="ourServicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Our Services
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="ourServicesDropdown">
+              <li><a class="dropdown-item" href="services.html">Smart Energy Service</a></li>
+              <li><a class="dropdown-item" href="solarservice.html">Solar Service</a></li>
+              <li><a class="dropdown-item" href="fabrication.html">Solar Structure Fabrication</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="whychoose.html" class="nav-link text-uppercase">Why SK Solar</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link text-uppercase">Get In Touch</a>
+          </li>
+        </ul>
+        <!-- Free Quote button -->
+        <button class="quote-btn" onclick="window.location.href='contact.html'">Free Quote</button>
+      </div>
+    </div>
+  </nav>
+
+ <section class="energy-banner">
+    <div class="energy-text">
+      <h1>SMART ENERGY SERVICES</h1>
+    </div>
+  </section>
+<div class="container-fluid">
+    <div class="containers">
+        <aside >
+          <div class="sidebar">
+            <a class="tab-btn" href="services.html" data-tab="install">Installation Services</a>
+            <a class="tab-btn" href="after.html" data-tab="after">After Sales Services</a>
+            <a class="tab-btn" href="amc.html" data-tab="amc">AMC – Annual Maintenance</a>
+            <a class="tab-btn" href="power.html" data-tab="plants">Solar Power Plants</a>
+    
+            <div class="contact-card">
+              <div class="contact-header">
+                <img src="css/images/Headset.png" alt="Headphone Icon" class="contact-icon" style="width:40px; height: 40px;"loading="lazy" />
+                <h3>Have Any Questions?</h3>
+              </div>
+              <div class="contact-infos">
+                <p>
+                  <img src="css/images/phonew.png" alt="Phone Icon" class="infos-icon" style="width:20px; height: 20px;"loading="lazy" />
+                  <a href="tel:+919944252489">99442 52489</a><br>
+                  <a href="tel:+917338844707">73388 44707</a>
+                </p>
+                <p>
+                  <img src="css/images/mes.png" alt="Email Icon" class="infos-icon" style="width:20px; height: 20px;"loading="lazy" />
+                  <a href="mailto:sksolardgl@gmail.com">sksolardgl@gmail.com</a>
+                </p>
+              </div>
+            </div>
+            
+            <div class="follow-us">
+              <h4>#Follow Us</h4>
+              <div class="social-icon">
+                <a href="https://www.facebook.com/p/SK-Solar-Dindigul-100086481907261/"><img src="css/images/Facebook F.png" alt="Facebook"loading="lazy" /></a>
+                <a href="https://wa.me/919944252489" target="_blank"><img src="css/images/WhatsApp.png" alt="WhatsApp"loading="lazy" /></a>
+                <a href="https://www.instagram.com/sksolardgl/"><img src="css/images/Instagram.png" alt="Instagram"loading="lazy" /></a>
+                <!-- <a><img src="css/images/Twitter Bird.png" alt="Twitter" /></a> -->
+              </div>
+            </div>
+            
+    
+          </div>
+      
+          
+    
+          
+          
+        </aside>
+    
+     
+        <div class="containered">
+          <div class="cards">
+            <div class="image-container">
+              <img src="css/images/service1.png" alt="Solar Panel Systems" loading="lazy">
+              <div class="cards-title">Solar Panel Systems</div>
+            </div>
+            <p>Reliable solar setups tailored for homes, businesses & industries.</p>
+            <hr class="divider">
+            <button class="btn-solar" onclick="window.location.href='contact.html'">Start Your Solar Journey</button>
+
+          </div>
+      
+          <div class="cards">
+            <div class="image-container">
+              <img src="css/images/service2.png" alt="Panel Commissioning" loading="lazy">
+              <div class="cards-title">Panel Commissioning</div>
+            </div>
+            <p>Ensure top performance with expert testing & commissioning.</p>
+            <hr class="divider">
+            <button class="btn-solar" onclick="window.location.href='contact.html'">Start Panel Commissioning</button>
+          </div>
+          <div class="cards">
+            <div class="image-container">
+              <img src="css/images/service3.png" alt="Solar Panel Systems" loading="lazy">
+              <div class="cards-title">Solar Street Lights</div>
+            </div>
+            <p>All-in-One & Semi-Integrated lighting for safer, greener streets.</p>
+            <hr class="divider">
+            <button class="btn-solar" onclick="window.location.href='contact.html'">Install Solar Street Lighting</button>
+          </div>
+      
+          <div class="cards">
+            <div class="image-container">
+              <img src="css/images/service4.png" alt="Panel Commissioning" loading="lazy">
+              <div class="cards-title">Water Heaters</div>
+            </div>
+            <p>ETC & FPC solar water heaters with energy-efficient performance.</p>
+            <hr class="divider">
+            <button class="btn-solar" onclick="window.location.href='contact.html'">View Solar Water Heater Options</button>
+          </div>
+    
+          <div class="cards">
+            <div class="image-container">
+              <img src="css/images/service5.png" alt="Solar Panel Systems" loading="lazy">
+              <div class="cards-title">Solar Pumps</div>
+            </div>
+            <p>Smart electric vehicle charging solutions for homes & businesses.</p>
+            <hr class="divider">
+            <button class="btn-solar" onclick="window.location.href='contact.html'">Set Up Solar Pump Systems</button>
+          </div>
+      
+          <div class="cards">
+            <div class="image-container">
+              <img src="css/images/service6.png" alt="Panel Commissioning" loading="lazy">
+              <div class="cards-title">Deploy EV Charging Stations</div>
+            </div>
+            <p>Smart electric vehicle charging solutions for homes & businesses.</p>
+            <hr class="divider">
+            <button class="btn-solar" onclick="window.location.href='contact.html'">Deploy EV Charging Stations</button>
+          </div>
+    
+          <div class="cards">
+            <div class="image-container">
+              <img src="css/images/service7.png" alt="Solar Panel Systems" loading="lazy">
+              <div class="cards-title">RO Water Purification Systems</div>
+            </div>
+            <p>Advanced RO systems for clean and safe drinking water.</p>
+            <hr class="divider">
+            <button class="btn-solar" onclick="window.location.href='contact.html'">Discover RO Water Solutions</button>
+          </div>
+      
+          <div class="cards">
+            <div class="image-container">
+              <img src="css/images/service8.png" alt="Panel Commissioning" loading="lazy">
+              <div class="cards-title">Battery Backup & UPS Systems</div>
+            </div>
+            <p>Seamless power continuity for residential and industrial needs.</p>
+            <hr class="divider">
+            <button class="btn-solar" onclick="window.location.href='contact.html'">Explore Backup Power Systems</button>
+          </div>
+          <div class="cards">
+            <div class="image-container">
+              <img src="css/images/service9.png" alt="Solar Panel Systems" loading="lazy">
+              <div class="cards-title">Energy Efficiency Solutions</div>
+            </div>
+            <p>Innovative solutions to reduce energy use and optimize savings.</p>
+            <hr class="divider">
+            <button class="btn-solar" onclick="window.location.href='contact.html'">Enhance Energy Efficiency</button>
+          </div>
+        </div>
+        
+      </div>
+    
+</div>
+
+
+
+
+<footer class="footer-solar text-light pt-4">
+
+  <div class="container-fluid">
+    <div class="row text-start">
+  
+      <!-- Logo & Social -->
+      <div class="col-md-3 mb-4 footer-brand">
+        <img src="css/images/logo-100.jpg" alt="Logo" class="footer-logo mb-3" loading="lazy">
+        <p>
+          Empowering Your Future<br />
+          with Sustainable Solar Solutions.<br />
+          Reliable. Innovative. Affordable.
+        </p>
+<div class="social-icon">
+  <a href="https://www.facebook.com/p/SK-Solar-Dindigul-100086481907261/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+  <a href="https://wa.me/919944252489" target="_blank"><i class="fab fa-whatsapp"></i></a>
+  <a href="https://www.instagram.com/sksolardgl/" target="_blank"><i class="fab fa-instagram"></i></a>
+</div>
+
+      </div>
+    
+      <!-- Quick Links -->
+      <div class="col-md-3 mb-4 footer-column">
+        <h5 class="footer-heading">Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Smart Energy Services</a></li>
+          <li><a href="whychoose.html">Why SK Solar?</a></li>
+          <li><a href="contact.html">Get in Touch</a></li>
+        </ul>
+      </div>
+      <!-- Services -->
+      <div class="col-md-3 mb-4 footer-column">
+        <h5 class="footer-heading">Services</h5>
+        <ul class="list-unstyled">
+          <li><a href="services.html">Installation Services</a></li>
+          <li><a href="after.html">After Sales Services</a></li>
+          <li><a href="amc.html">AMC – Annual Maintenance</a></li>
+          <li><a href="power.html">Solar Power Plants</a></li>
+          <li><a href="solarservice.html">Solar Service</a></li>
+          <li> <a href="fabrication.html">Solar structure fabrication</a></li>
+        </ul>
+      </div>
+    
+
+      <div class="col-md-3 mb-4 footer-column footer-contact">
+        <h5 class="footer-heading">Address</h5>
+      
+        <div class="footer-item">
+          <img src="css/images/Location.png" alt="Location" id="loc" loading="lazy">
+          <div>
+            2A/1, ST-3, Thangammapatty,<br>Ayyalur Post,<br>Dindigul – 624801.
+          </div>
+        </div>
+      
+        <div class="footer-item">
+          <img src="css/images/Vector (4).png" alt="Email" loading="lazy">
+          <div>
+            <a href="mailto:sksolardgl@gmail.com">sksolardgl@gmail.com</a>
+          </div>
+        </div>
+      
+        <div class="footer-item">
+          <img src="css/images/Vector (5).png" alt="Phone"id="phone" loading="lazy">
+          <div>
+            <a href="tel:+919944252489">+91 99442 52489</a><br>
+            <a href="tel:+917338844707">+91 73388 44707</a>
+          </div>
+        </div>
+      </div>
+      
+    
+    </div>
+   
+  </div>
+  
+  </footer>
+  <div class="footer-bottom text-center py-3">
+    &copy; 2025 SK ENGINEERING AND SOLAR POWER SOLUTIONS. All Rights Reserved.
+  </div>
+    <!-- Scroll to top button -->
+<button id="scrollToTopBtn" title="Go to top" onclick="scrollToTop()">
+  ↑
+</button>
+
+
+<!-- jQuery for Owl Carousel -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+<!-- Bootstrap 5 Bundle (includes Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Owl Carousel -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<!-- WOW.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<script>
+  new WOW().init();
+</script>
+
+ <script src="./js/script.js"></script>
+
+
+</body>
+
+</html>

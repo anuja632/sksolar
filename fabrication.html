@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Ensure consistent rendering on mobile devices -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<!-- Optional but recommended -->
+<meta name="format-detection" content="telephone=no">
+  <title>SK Solar|Solar structure fabrication</title>
+
+  <!-- Bootstrap 5.3.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+  <!-- Owl Carousel CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    @media (max-width: 991.98px) {
+      .dropdown-menu {
+        display: none;
+        position: static !important;
+        float: none;
+        width: 100%;
+        margin-top: 0;
+        border: none;
+        box-shadow: none;
+        font-weight: 500;
+      }
+
+      .dropdown.show .dropdown-menu {
+        display: block;
+                font-weight: 500;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar fixed-top">
+    <div class="contact-info">
+      <span>
+        <img src="css/images/phone.png" alt="Phone" id="phn" loading="lazy">
+        <a href="tel:9944252489">99442 52489</a> | <a href="tel:7338844707">73388 44707</a>
+      </span>
+      <span>
+        <img src="css/images/Vector (4).png" alt="Email" id="email" loading="lazy">
+        <a href="mailto:sksolardgl@gmail.com">sksolardgl@gmail.com</a>
+      </span>
+    </div>
+    <div class="social-icond">
+      <a href="https://www.facebook.com/p/SK-Solar-Dindigul-100086481907261/" target="_blank">
+        <img src="css/images/Facebook r.png" alt="Facebook" id="facebook" loading="lazy">
+      </a>
+      <a href="https://wa.me/919944252489" target="_blank">
+        <img src="css/images/whatsappr.png" alt="WhatsApp" id="whatsapp" loading="lazy">
+      </a>
+      <a href="https://www.instagram.com/sksolardgl/">
+        <img src="css/images/Instagramr.png" alt="Instagram" id="insta" loading="lazy">
+      </a>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top pt-5">
+    <div class="container-fluid" id="al">
+      <a class="navbar-brand" href="#">
+        <img src="css/images/logo-100.jpg" alt="Logo" class="logo" loading="lazy">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link text-uppercase" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link text-uppercase" href="about.html">About</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-uppercase" href="#" id="dropdownMenu" role="button" data-bs-toggle="dropdown">
+              Our Services
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu">
+              <li><a class="dropdown-item" href="services.html">Smart Energy Service</a></li>
+              <li><a class="dropdown-item" href="solarservice.html">Solar Service</a></li>
+              <li><a class="dropdown-item" href="fabrication.html">Solar Structure Fabrication</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link text-uppercase" href="whychoose.html">Why SK Solar</a></li>
+          <li class="nav-item"><a class="nav-link text-uppercase" href="contact.html">Get In Touch</a></li>
+        </ul>
+        <button class="quote-btn" onclick="window.location.href='contact.html'">Free Quote</button>
+      </div>
+    </div>
+  </nav>
+
+<div class="mains" id="lo">
+    <div class="container my-5">
+      <h2 class="text-white mb-4">Our Services</h2>
+      <div class="row">
+        <!-- Left Tabs -->
+        <div class="col-md-4  border-end">
+          <div class="service-tab active" onclick="showService(0)">Fabricated Steel Structures</div>
+          <div class="service-tab" onclick="showService(1)">Rolled & Custom Structures</div>
+          <div class="service-tab" onclick="showService(2)">Poles & Masts</div>
+          <div class="service-tab" onclick="showService(3)">Structural & Lighting Design Services</div>
+          <div class="service-tab" onclick="showService(4)">Hot Dip Galvanizing</div>
+        </div>
+
+        <!-- Right Content -->
+        <div class="col-md-8">
+          <div class="service-content active" id="service0">
+            <div class="me-4">
+              <h3>Fabricated Steel Structures</h3>
+              <p>We provide robust, high-strength steel structures that serve as a dependable foundation for solar panels. Engineered for longevity and precision, they are ideal for small to large-scale installations, ensuring structural.</p>
+              <ul id="aq">
+                <li><i class="fas fa-check-circle  me-2"></i>High-strength Steel</li>
+                <li><i class="fas fa-check-circle  me-2"></i>Durable & Long-lasting</li>
+                <li><i class="fas fa-check-circle  me-2"></i>Custom-fit to Solar Panels</li>
+              </ul>
+              <button class="get-quote-btn" onclick="window.location.href='contact.html'">GET A QUOTE</button>
+            </div>
+            <img src="https://img.freepik.com/free-photo/solar-panels-meadow_1286-146.jpg?semt=ais_hybrid&w=740" class="service-image" alt="Service Image" loading="lazy">
+          </div>
+
+          <div class="service-content" id="service1">
+            <div class="me-4">
+              <h3>Rolled & Custom Structures</h3>
+              <p>Custom fabrication services for challenging terrains, complex layouts, or specific design requirements. Tailored, innovative solutions ensure optimal performance and enhanced durability, functionality, and aesthetic appeal.</p>
+              <ul  id="aq">
+                <li><i class="fas fa-check-circle  me-2"></i>Site-specific Design</li>
+                <li><i class="fas fa-check-circle  me-2"></i>Flexible Structure Sizes</li>
+                <li><i class="fas fa-check-circle  me-2"></i>Optimized for Efficiency</li>
+              </ul>
+              <button class="get-quote-btn" onclick="window.location.href='contact.html'">GET A QUOTE</button>
+            </div>
+            <img src="css/images/roll.jpg" class="service-image" alt="Service Image" loading="lazy">
+          </div>
+
+          <div class="service-content" id="service2">
+            <div class="me-4">
+              <h3>Poles & Masts</h3>
+              <p>Specialized, durable poles and masts for efficient, pole-mounted solar systems and lighting, enhancing structural stability and installation flexibility, adaptability, and versatility.</p>
+              <ul  id="aq">
+                <li><i class="fas fa-check-circle  me-2"></i>Precision Engineered</li>
+                <li><i class="fas fa-check-circle  me-2"></i>High Stability</li>
+                <li><i class="fas fa-check-circle  me-2"></i>Ideal for Outdoor Use</li>
+              </ul>
+              <button class="get-quote-btn" onclick="window.location.href='contact.html'">GET A QUOTE</button>
+            </div>
+            <img src="./css/images/wind.jpg" class="service-image" alt="Service Image" loading="lazy">
+          </div>
+
+          <div class="service-content" id="service3">
+            <div class="me-4">
+              <h4>Structural & Lighting Design Services</h4>
+              <p>Technically sound and visually impressive structural and lighting designs that align seamlessly with your project goals—from initial planning to final execution—ensuring functionality, compliance, and aesthetic appeal .</p>
+              <ul  id="aq">
+                <li><i class="fas fa-check-circle  me-2"></i>Design to Execution</li>
+                <li><i class="fas fa-check-circle  me-2"></i>Innovative Lighting Layouts</li>
+                <li><i class="fas fa-check-circle  me-2"></i>Compliant & Aesthetic</li>
+              </ul>
+              <button class="get-quote-btn" onclick="window.location.href='contact.html'" id="ap">GET A QUOTE</button>
+            </div>
+            <img src="css/images/poll.jpg" class="service-image" alt="Service Image" loading="lazy">
+          </div>
+
+          <div class="service-content" id="service4">
+            <div class="me-4">
+              <h3>Hot Dip Galvanizing</h3>
+              <p>Durable protective zinc coating that ensures enhanced resistance to corrosion and weather damage. This process forms a long-lasting barrier against harsh environmental conditions, including moisture, chemicals.</p>
+              <ul  id="aq">
+                <li><i class="fas fa-check-circle  me-2"></i>Corrosion Resistant</li>
+                <li><i class="fas fa-check-circle  me-2"></i>Weatherproof Finish</li>
+                <li><i class="fas fa-check-circle  me-2"></i>Durable Protection</li>
+              </ul>
+              <button class="get-quote-btn" onclick="window.location.href='contact.html'">GET A QUOTE</button>
+            </div>
+            <img src="css/images/hot.avif" class="service-image" alt="Service Image" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+<section class="py-5 process-section">
+  <div class="container text-center">
+    <h2 class="section-title mb-4">Our Process</h2>
+    <p class="mb-5">We follow a streamlined and quality-focused approach to deliver durable and efficient solar structures:</p>
+
+    <div class="row  g-4">
+      <!-- Step 1 -->
+      <div class="col-md-2 col-sm-6 process-step-card">
+        <div class="step-icon"><i class="fas fa-pencil-ruler"></i></div>
+        <div class="step-title  text-white">Design Consultation</div>
+        <div class="step-body">
+          <p>We assess project needs-panel size, site layout, tilt angle, and environmental factors-to create efficient structural designs.</p>
+        </div>
+        <!-- <div class="step-number">01</div> -->
+      </div>
+
+      <!-- Step 2 -->
+      <div class="col-md-2 col-sm-6 process-step-card">
+        <div class="step-icon"><i class="fas fa-industry"></i></div>
+        <div class="step-title text-white">Precision Fabrication</div>
+        <div class="step-body">
+          <p>We utilize precision CNC machines and advanced welding systems to manufacture with the exceptional accuracy.</p>
+        </div>
+        <!-- <div class="step-number">02</div> -->
+      </div>
+
+      <!-- Step 3 -->
+      <div class="col-md-2 col-sm-6 process-step-card">
+        <div class="step-icon"><i class="fas fa-spray-can-sparkles"></i></div>
+        <div class="step-title text-white">Surface Treatment</div>
+        <div class="step-body">
+          <p>We apply galvanization or powder coating to protect structures from corrosion and ensure long-term durability.</p>
+        </div>
+        <!-- <div class="step-number">03</div> -->
+      </div>
+
+      <!-- Step 4 -->
+      <div class="col-md-2 col-sm-6 process-step-card">
+        <div class="step-icon"><i class="fas fa-solar-panel"></i></div>
+        <div class="step-title  text-white">Mounting Structure</div>
+        <div class="step-body">
+          <p>We manufacture ground, rooftop, pole-mounted, and carport structures-each optimized for easy installation and low.</p>
+        </div>
+        <!-- <div class="step-number">04</div> -->
+      </div>
+
+      <!-- Step 5 -->
+      <div class="col-md-2 col-sm-6 process-step-card">
+        <div class="step-icon"><i class="fas fa-check-circle"></i></div>
+        <div class="step-title text-white">Quality Assurance</div>
+        <div class="step-body">
+          <p>Every structure is quality-checked and built to meet industry standards. Documentation and the  structural reports.</p>
+        </div>
+        <!-- <div class="step-number">05</div> -->
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<footer class="footer-solar text-light pt-4">
+
+  <div class="container-fluid">
+    <div class="row text-start">
+  
+      <!-- Logo & Social -->
+      <div class="col-md-3 mb-4 footer-brand">
+        <img src="css/images/logo-100.jpg" alt="Logo" class="footer-logo mb-3">
+        <p>
+          Empowering Your Future<br />
+          with Sustainable Solar Solutions.<br />
+          Reliable. Innovative. Affordable.
+        </p>
+<div class="social-icon">
+  <a href="https://www.facebook.com/p/SK-Solar-Dindigul-100086481907261/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+  <a href="https://wa.me/919944252489" target="_blank"><i class="fab fa-whatsapp"></i></a>
+  <a href="https://www.instagram.com/sksolardgl/" target="_blank"><i class="fab fa-instagram"></i></a>
+</div>
+
+      </div>
+    
+      <!-- Quick Links -->
+      <div class="col-md-3 mb-4 footer-column">
+        <h5 class="footer-heading">Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Smart Energy Services</a></li>
+          <li><a href="whychoose.html">Why SK Solar?</a></li>
+          <li><a href="contact.html">Get in Touch</a></li>
+        </ul>
+      </div>
+    
+      <!-- Services -->
+      <div class="col-md-3 mb-4 footer-column">
+        <h5 class="footer-heading">Services</h5>
+        <ul class="list-unstyled">
+          <li><a href="services.html">Installation Services</a></li>
+          <li><a href="after.html">After Sales Services</a></li>
+          <li><a href="amc.html">AMC – Annual Maintenance</a></li>
+          <li><a href="power.html">Solar Power Plants</a></li>
+          <li><a href="solarservice.html">Solar Service</a></li>
+          <li><a href="fabrication.html">Solar structure fabrication</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-3 mb-4 footer-column footer-contact">
+        <h5 class="footer-heading">Address</h5>
+      
+        <div class="footer-item">
+          <img src="css/images/Location.png" alt="Location" id="loc" loading="lazy">
+          <div>
+            2A/1, ST-3, Thangammapatty,<br>Ayyalur Post,<br>Dindigul – 624801.
+          </div>
+        </div>
+      
+        <div class="footer-item">
+          <img src="css/images/Vector (4).png" alt="Email" loading="lazy">
+          <div>
+            <a href="mailto:sksolardgl@gmail.com">sksolardgl@gmail.com</a>
+          </div>
+        </div>
+      
+        <div class="footer-item">
+          <img src="css/images/Vector (5).png" alt="Phone"id="phone" loading="lazy">
+          <div>
+            <a href="tel:+919944252489">+91 99442 52489</a><br>
+            <a href="tel:+917338844707">+91 73388 44707</a>
+          </div>
+        </div>
+      </div>
+      
+    
+    </div>
+   
+  </div>
+  
+  </footer>
+  <div class="footer-bottom text-center py-3">
+    &copy; 2025 SK ENGINEERING AND SOLAR POWER SOLUTIONS. All Rights Reserved.
+  </div>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  
+  <!-- Scroll to top button -->
+<button id="scrollToTopBtn" title="Go to top" onclick="scrollToTop()">
+  ↑
+</button>
+
+<script>
+  function showService(index) {
+    // Toggle tabs
+    const tabs = document.querySelectorAll(".service-tab");
+    tabs.forEach((tab, i) => {
+      tab.classList.toggle("active", i === index);
+    });
+
+    // Toggle content
+    const contents = document.querySelectorAll(".service-content");
+    contents.forEach((content, i) => {
+      content.classList.toggle("active", i === index);
+    });
+  }
+</script>
+    <!-- Optional: Link to Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- WOW.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+  <script>
+    new WOW().init();
+  </script>
+  <!-- Owl Carousel JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  
+  <script src="js/script.js"></script>
+</body>
+</html>
