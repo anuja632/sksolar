@@ -747,6 +747,42 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 </script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const owlNav = document.querySelector('.owl-nav');
+    const carousel = document.querySelector('.owl-carousel');
+
+    // Function to toggle visibility on scroll
+    function handleScroll() {
+      if (window.scrollY > 100) {
+        owlNav.classList.add('hide-nav');
+        owlNav.classList.remove('show-nav');
+      } else {
+        owlNav.classList.add('show-nav');
+        owlNav.classList.remove('hide-nav');
+      }
+    }
+
+    // Hover detection to always show on carousel hover
+    carousel.addEventListener('mouseenter', () => {
+      owlNav.classList.add('show-nav');
+      owlNav.classList.remove('hide-nav');
+    });
+
+    carousel.addEventListener('mouseleave', () => {
+      if (window.scrollY > 100) {
+        owlNav.classList.add('hide-nav');
+        owlNav.classList.remove('show-nav');
+      }
+    });
+
+    // Initial check
+    handleScroll();
+
+    // On scroll
+    window.addEventListener('scroll', handleScroll);
+  });
+</script>
 
 
  </body>
