@@ -5,6 +5,9 @@ html, body {
     padding: 0;
 }
 
+section.p-0 {
+  width: 100%;
+}
 #al{
   padding: 10px;
 }
@@ -173,7 +176,12 @@ width:150px;
   height: 100vh;
   overflow: hidden;
 }
-
+.energy-carousel .slide {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%; /* Full viewport width */
+}
 .energy-carousel .item {
   position: relative;
   background-size: cover;
@@ -262,7 +270,7 @@ width:150px;
   transform: translate(-50%, -50%);
   color: white;
   text-align: center;
-  z-index: 2; /* Text sits above the dark overlay */
+  z-index: 1; /* Text sits above the dark overlay */
 }
 
 .energy-carousel .content {
@@ -279,9 +287,43 @@ width:150px;
   font-weight: bold;
   margin-bottom: 10px;
 }
-.energy-carousel span{
+.custom-nav {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  transform: translateY(-50%);
+  z-index: 10;
+  pointer-events: none; /* Allow slide clicks through */
+}
+
+.slider-arrow {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid #e0e0e0;
+  color: #e53935;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  pointer-events: all; /* Enable click */
+  transition: all 0.3s ease;
+}
+
+.slider-arrow:hover {
+  background: #f5f5f5;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* .energy-carousel span{
 display: block;
-/* font-size: 35px; */
 width: 50px;
   height: 50px;
   font-size: 28px;
@@ -289,7 +331,7 @@ font-weight: bold;
 margin-bottom: 10px;
 color: #D23731;
 background-color: white;
-border-radius: 50%;}
+border-radius: 50%;} */
 
 .energy-carousel h1 {
   font-size: 32px;
@@ -315,7 +357,7 @@ border-radius: 50%;}
   text-decoration: none;
   display: inline-block;
   transition: all 0.3s ease;
-  width: 160px;
+  width: 180px;
   height:50px;
   padding:10px;
 
@@ -337,10 +379,10 @@ background: #1C5DB5;
   color: white;
 }
 
-.energy-carousel .btn.secondary:hover {
+/* .energy-carousel .btn.secondary:hover {
   background: white;
     color: black !important;
-  }
+  } */
   
 
 
@@ -359,7 +401,7 @@ background: #1C5DB5;
   width: 100%;
   display: flex;
   justify-content: space-between;
-  transform: translateY(-50%);
+  /* transform: translateY(-50%); */
   padding: 0 20px;
   pointer-events: none;
   z-index: 9999;  /* Ensure it's above other elements */
@@ -377,14 +419,11 @@ background: #1C5DB5;
   font-size: 20px;
   color: #D23731;
   cursor: pointer;
-  pointer-events: all;
+  /* pointer-events: all; */
   transition: all 0.3s ease;
   z-index: 10000;
 }
 
-.owl-prev:hover, .owl-next:hover {
-  background-color: dark#D23731;    /* Slightly darker #D23731 on hover */
-}
 
 
 
@@ -974,6 +1013,7 @@ margin-top:45px;
   color: #333;
   font-size: 25px;
 }
+
 .mySwiper {
   width: 100%;
   max-width: 1200px;
@@ -991,6 +1031,15 @@ margin-top:45px;
   overflow: hidden;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
+}
+/* Show text ONLY when hovering image */
+.frame-item:hover + .hover-text {
+  opacity: 1;
+}
+/* Animate line only when text is shown (same trigger) */
+.frame-item:hover + .hover-text::before {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .frame-item {
@@ -1941,6 +1990,8 @@ h2:nth-of-type(3) {
   margin-bottom: 30px;
   width:480px;
   line-height: 1.8;
+      text-align: justify;
+
 }
 
 .solar-contact-details p {
@@ -1952,8 +2003,10 @@ h2:nth-of-type(3) {
 }
 
 .solar-icon {
-  width: 30px;
+  /* width: 30px; */
   margin-right: 10px;
+      margin-top: 6px;
+
 }
 
 .solar-highlight-icons {
@@ -1977,7 +2030,7 @@ h2:nth-of-type(3) {
   left: 22px;
   border-radius: 10px;
   margin-top: 25px;
-  animation: scaleUp 2s ease-out infinite, shadowEffect 2s ease-out infinite; /* Infinite loop */
+  /* animation: scaleUp 2s ease-out infinite, shadowEffect 2s ease-out infinite; Infinite loop */
 }
 
 @keyframes scaleUp {
@@ -2441,7 +2494,7 @@ gap:10px;
   font-size: 20px;
   font-weight: bold;
 
-  width: 280px;
+  width: 100%;
 }
 
 /* Ripple effect on hover */
@@ -2765,6 +2818,8 @@ margin-left: 4%;}
   font-size: 16px;
   color: #555;
   margin-bottom: 20px;
+      text-align: justify;
+
 }
 
 .bottom-row {
@@ -3304,6 +3359,8 @@ form textarea {
       margin-bottom: 10px;
       cursor: pointer;
       text-align: left;
+          font-size: 18px;
+
     }
     .service-tab.active {
       background-color:#D23731;
@@ -3312,13 +3369,14 @@ form textarea {
     .service-content {
       display: none;
         color: #fff; 
+
     }
     .service-content.active {
       display: flex;
     
     }
     .service-content p{
-      font-size: 15px;
+      font-size: 16px;
     }
     .service-image {
       max-width: 50%;
@@ -3371,6 +3429,7 @@ li  {
 .feature-box {
   background-color: #fff;
   overflow: hidden; 
+  border: 1px solid;
 }
 
 .feature-title {
@@ -3614,8 +3673,8 @@ justify-content: space-evenly;}
 }
 
 .step-title {
-  font-size: 15px;
-  font-weight: 600;
+    font-size: 24px;
+      font-weight: 600;
   padding: 8px;
   margin: 15px 0;
 background-color: #D23731 ;
@@ -3631,7 +3690,7 @@ text-align: center;
 }
 
 .step-body p {
-  font-size: 15px;
+  font-size: 18px;
   color: #444;
   text-align: justify;
     line-height: 1.6; /* Try 1.3 or 1.2 for even tighter spacing */
@@ -3697,6 +3756,13 @@ text-align: center;
     margin-left:0px;
     height:65px;
   }
+    .energy-carousel .content {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 20px;
+    /* background: rgba(0, 0, 0, 0.5); */
+    border-radius: 8px;
+  }
   .about-content{
     margin-left:3%;
   }
@@ -3747,6 +3813,9 @@ text-align: center;
     opacity: 0;
     animation: fadeInUp 1.5s ease forwards;
     transition: background-color 0.7s, color 0.7s, transform 0.7s;
+}
+.benefit-card p{
+  text-align: center;
 }
 .benefits-section {
     position: absolute;
@@ -3943,7 +4012,7 @@ h3 {
   .right-content h2 {
     font-size: 24px;
   }
-    
+ 
   .left-box {
     width: 50%;
     display: flex
@@ -3954,8 +4023,21 @@ h3 {
     overflow: hidden;
     height: 500px;
 }
-}
 
+}
+@media(width:1024px){
+  .solar-highlight-icons {
+    display: flex
+;
+    gap: 60px;
+    align-items: flex-start;
+    margin-top: 0px !important;
+    margin-left: 90px;
+}
+#akk {
+    margin-top: 400px !important;
+}
+}
 @media (min-width: 768px) and (max-width: 992px){
   .energy-carousel {
     height: 90vh;
@@ -3963,26 +4045,30 @@ h3 {
   .energy-carousel .container {
     position: absolute;
     top: 50%;
-    left: 60%;
+    left: 50%;
     transform: translate(-50%, -50%);
     color: white;
     text-align: center;
     z-index: 2;
 }
-  .energy-carousel .content {
-    max-width: 500px;
-    /* margin: 0 auto; */
+.benefit-card p{
+  text-align: center;
+}
+    .energy-carousel .content {
+    max-width: 650px;
+    margin: 0 auto;
     padding: 20px;
     /* background: rgba(0, 0, 0, 0.5); */
     border-radius: 8px;
-  }
-  .energy-carousel .item {
+  }nergy-carousel .item {
     min-height: 90vh;
   }
-.energy-carousel .btn {
-        font-size: 14px;
-        width: 140px;
-        height: 60px;}
+  .energy-carousel .btn {
+    font-size: 14px;
+    width: 160px;
+    height: 45px;
+    padding: 8px;
+  }
 
   .owl-prev, .owl-next {
     width: 30px;
@@ -4036,7 +4122,7 @@ h3 {
         bottom: -1140px;
         left: 30%;
     }  #akk{
-    margin-top:360px;
+    margin-top:390px;
   }
   .solar-highlight-icons {
     display: flex
@@ -4063,7 +4149,15 @@ h3 {
     .quote-btn{
       margin-left: 0px;
     }
-    
+    .right-content .subtitle
+ {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.s
 #al{
   padding: 0px;
 }
@@ -4137,8 +4231,9 @@ left: 25%;
 .footer-item a {
   color: inherit;
   text-decoration: none;
-  font-size:16px;
+  font-size:14px;
 }
+
    /* .footer-item{
     display:block;
   } */
@@ -4263,6 +4358,7 @@ left: 25%;
 
   .right-content {
     padding: 20px;
+    
   }
 
   .right-content h2 {
@@ -4332,8 +4428,22 @@ left: 25%;
     position: relative;
     overflow: hidden;
 }
+  /* .col-md-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  } */
 
 }
+@media(width:430px){
+    .services {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 4rem !important
+;
+        padding: 0px;
+        width: 100%;
+    }
+  }
+
 @media(width:912px){
         .about-section {
         animation: fadeIn 1s ease-in-out;
@@ -4345,6 +4455,13 @@ left: 25%;
         position: absolute;
         bottom: -1140px;
         left: 30%;
+    }
+    .main-image {
+        width: 100%;
+        border-radius: 16px;
+        height: 510px;
+        /* box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1); */
+        margin-left: 10px;
     }
     .trust-badge {
     background-color: #d62828;
@@ -4361,19 +4478,90 @@ left: 25%;
 }
 
 }
+@media(width:540px){
+      #ad {
+        animation-delay: 1.2s;
+        position: absolute;
+        bottom: -1140px;
+        left: 19% !important;
+    }
+      .col-md-4.border-end {
+    border-right: none !important;
+  }
+.left-box .contact-info {
+    padding: 40px 20px;
+    width: 50%;
+    display: flex
+;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0px;
+}
+  #lo{
+    margin-top:200px;
+  }
+    .about-content {
+      margin-left:0px;}
+          .services {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 5rem !important;
+        padding: 1rem;
+    }
+    .hover-text::before {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 20px;
+    bottom: 20px;
+    width: 4px;
+    background-color: #007bff;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: translateX(-10px);
+    border-radius: 2px;
+}
 
-@media (min-width: 499px) and (max-width: 750px) {
+.solar-main-heading {
+    font-size: 25px;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+}
+@media (min-width: 500px) and (max-width: 750px) {
   .energy-carousel {
     height: 85vh;
   }
+      .navbar {
+        padding-top: 10rem
+ !important;
+    }
+    .right-content .subtitle
+ {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.main-image {
+    width: 100%;
+    border-radius: 16px;
+    height: 400px;
+    /* box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1); */
+    margin-left: 11px;
+}
    .social-icond {
     gap: 10px;
     display: flex;
     justify-content: center;
     margin-top: 10px;
 }
+.benefit-card p{
+  text-align: center;
+  margin-left:0px;
+}
 #la {
-    margin-top: 110px;
+    margin-top: 200px;
 }
 .logo{
   width:150px;
@@ -4415,6 +4603,7 @@ left: 25%;
   .energy-carousel .content {
     padding: 15px;
     max-width: 400px;
+
   }
 
   .energy-carousel .item {
@@ -4433,10 +4622,10 @@ left: 25%;
   }
 
   .energy-carousel .btn {
-    font-size: 13px;
-    width: 150px;
-    height: 50px;
-    margin: 5px;
+    font-size: 14px;
+    width: 160px;
+    height: 45px;
+    padding: 8px;
   }
 
   .owl-prev,
@@ -4510,9 +4699,9 @@ left: 25%;
     .quote-btn{
       margin-left: 0px;
     }
-      .navbar{
+      /* .navbar{
         padding-top: 6rem !important;
-      }
+      } */
 
   .about-section {
     margin-top: 1700px;
@@ -4533,7 +4722,7 @@ left: 0%;
 }
   .services {
     grid-template-columns: repeat(1, 1fr);
-    gap: 2rem;
+    gap: 3rem;
     padding: 1rem;
   }
 
@@ -4552,9 +4741,9 @@ left: 0%;
     gap: 20px;
   }
 
-  .footer-item {
+  /* .footer-item {
     display: block;
-  }
+  } */
 
   .social-icon a {
     width: 35px;
@@ -4627,15 +4816,17 @@ left: 0%;
 
   .solar-descriptions {
     width: 100%;
+        text-align: justify;
+
   }
-  #agri {
-    position: absolute;
-    width: 300px;
-    left: 22px;
-    border-radius: 10px;
-}
+    #agri {
+        position: absolute;
+        width: 100%;
+        left: 0px;
+        border-radius: 10px;
+    }
 #akk{
-  margin-top:215px !important;
+  margin-top:350px !important;
 }  .future-container,
   .bottom-row {
     flex-direction: column;
@@ -4648,6 +4839,8 @@ width:50%;    object-fit: cover;
 
   .right-content {
     padding: 16px;
+        text-align: justify;
+
   }
 
 
@@ -4689,7 +4882,22 @@ width:50%;    object-fit: cover;
     position: static;
     margin: 10px auto;
   }
-  
+  .owl-prev, .owl-next {
+    background-color: white;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: flex
+;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: #D23731;
+    cursor: pointer;
+    pointer-events: all;
+    transition: all 0.3s ease;
+    z-index: 10000;
+}
 
 
   .activity-img {
@@ -4710,7 +4918,10 @@ width:50%;    object-fit: cover;
     margin-top: 30px;
     text-align: center;
   }
-
+  .col-md-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
 }
 
 .owl-nav.hide-nav {
@@ -4747,6 +4958,11 @@ width:50%;    object-fit: cover;
       .navbar{
         padding-top: 9rem !important;
       }
+      .logo{
+  width:150px;
+  margin-left:0px;
+  height:65px;
+}
       .energy-carousel .container {
         position: absolute;
         top: 50%;
@@ -4776,6 +4992,22 @@ width:50%;    object-fit: cover;
     text-align: center;
     padding: 15px;
   }
+  .owl-prev, .owl-next {
+    background-color: white;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex
+;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: #D23731;
+    cursor: pointer;
+    pointer-events: all;
+    transition: all 0.3s ease;
+    z-index: 10000;
+}
 
   .contact-info, .social-icond {
     width: 100%;
@@ -4823,7 +5055,7 @@ width:50%;    object-fit: cover;
 .services {
         grid-template-columns: repeat(1, 1fr);
 
-    gap: 2rem;
+    gap: 4rem;
     padding: 0px;
     width: 100%;
 }
@@ -4887,17 +5119,17 @@ left: 0%;
   .solar-descriptions {
     width: 100%;
   }
-  #agri {
-    position: absolute;
-    width: 300px;
-    left: 22px;
-    border-radius: 10px;
-}
+    #agri {
+        position: absolute;
+        width: 100%;
+        left: -10px;        
+        border-radius: 10px;
+    }
 .solar-cards{
   row-gap:20px;
 }
 #akk{
-  margin-top:215px !important;
+  margin-top:275px !important;
 }
     .solar-highlight-icons {
         margin-top: 21px;
@@ -4905,17 +5137,12 @@ left: 0%;
         margin-left: 0px;
         gap: 0px;
     }
-.energy-carousel .btn {
-    font-size: 16px;
-    margin: 5px;
-    border-radius: 5px;
-    text-decoration: none;
-    display: inline-block;
-    transition: all 0.3s ease;
-    width: 200px;
-    height: 70px;
-    padding: 10px;
-}
+  .energy-carousel .btn {
+    font-size: 14px;
+    width: 160px;
+    height: 45px;
+    padding: 8px;
+  }
   
   .containered {
     grid-template-columns: 1fr; /* stack cards */
@@ -5035,7 +5262,7 @@ form input, form select, form textarea {
     font-weight: bold;
     font-size: 16px;
     position: absolute;
-    bottom: 150px;
+    bottom: 123px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 2;
@@ -5064,7 +5291,21 @@ form input, form select, form textarea {
     gap: 30px;
 }
 #la {
-    margin-top: 110px;
+    margin-top: 200px;
+}
+  .col-md-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .main-image {
+    width: 100%;
+    border-radius: 16px;
+    height: 400px;
+    /* box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1); */
+    margin-left: 10px;
+}
+#lo {
+    margin-top: 200px;
 }
 .future-container,
   .bottom-row {
@@ -5083,6 +5324,8 @@ form input, form select, form textarea {
   .info-card p,
   .right-content .subtitle {
     font-size: 14px;
+        text-align: justify;
+
   }
 }
 @media (max-width: 400px) {
@@ -5120,6 +5363,13 @@ form input, form select, form textarea {
         z-index: 2;
         width: 215px;
     }
+    .main-image {
+    width: 100%;
+    border-radius: 16px;
+    height: 400px;
+    /* box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1); */
+    margin-left: 10px;
+}
     .buttons {
     display: flex
 ;
@@ -5174,15 +5424,39 @@ form input, form select, form textarea {
 }    .card {
         width: 300px;
     }
+    .service-card:nth-child(2), .service-card:nth-child(4)
+ {
+        position: relative;
+        top: 15px;
+        left: 5%;
+    }
+        .service-card:nth-child(1), .service-card:nth-child(3) {
+        position: relative;
+        top: 20px;
+        left: 5%;
+    }
+    #ad {
+        animation-delay: 1.2s;
+        position: absolute;
+        bottom: -1160px;
+        left: 9% !important;
+    
   }
 
-
+}
 
 
 @media only screen and (device-width: 430px) {
   .cards-title {
     width:100%;
   }
+  .benefit-card p {
+    font-size: 20x;
+    color: black;
+    transition: color 0.3s;
+    text-align: center;
+
+}
   /* Your styles here */
   #aa {
     animation-delay: 0.3s;
@@ -5190,6 +5464,14 @@ form input, form select, form textarea {
     bottom: 250px;
     right: 15% !important;
   }
+  .step-title {
+    font-size: 23px;
+    font-weight: 600;
+    padding: 8px;
+    margin: 15px 0;
+    background-color: #D23731;
+    text-align: center;
+}
 
   #ab {
     animation-delay: 0.6s;
@@ -5215,6 +5497,7 @@ form input, form select, form textarea {
     padding: 18px;
   }
 
+
   .btn {
     font-size: 13px;
   }
@@ -5230,6 +5513,34 @@ form input, form select, form textarea {
     flex-wrap: wrap;
 }
 }
+@media only screen and (max-width:412px){
+    .cards-title {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #d23b30;
+    color: white;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    width: 100%;
+}
+.benefit-card p {
+    font-size: 20x;
+    color: black;
+    transition: color 0.3s;
+    text-align: center;
+    margin-left: 0px;
+}
+}
+@media only screen and (max-width: 390px) {
+    #agri {
+        position: absolute;
+        width: 94% !important;
+        left: -14px !important;
+        border-radius: 10px;
+    }}
 @media only screen and (max-width: 375px) {
 
     #ad {
@@ -5279,9 +5590,50 @@ form input, form select, form textarea {
     font-weight: bold;
     width: 100%;
 }
+#scrollToTopBtn {
+  padding:10px;
+}
 }
 @media (max-width: 500px) {
   .col-md-4.border-end {
     border-right: none !important;
   }
+  .owl-prev, .owl-next {
+    background-color: white;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex
+;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: #D23731;
+    cursor: pointer;
+    pointer-events: all;
+    transition: all 0.3s ease;
+    z-index: 10000;
+}
+.goal-cards {
+    display: flex
+;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 16px;
+    margin-top: 20px;
+    opacity: 0;
+    animation: fadeInUp 3s forwards 2s;
+}
+}
+@media only screen and (max-width: 412px) {
+    #ad {
+        animation-delay: 1.2s;
+        position: absolute;
+        bottom: -1160px;
+        left: 19%;
+    }
+    .services
+    {
+    margin-left: -10px;
+}
 }

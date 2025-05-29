@@ -117,11 +117,11 @@
   <a class="nav-link dropdown-toggle text-uppercase" href="#" id="ourServicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Our Services
   </a>
-  <ul class="dropdown-menu" aria-labelledby="ourServicesDropdown">
-    <li><a class="dropdown-item" href="services.html">Smart Energy Service</a></li>
-    <li><a class="dropdown-item" href="solarservice.html">Solar Service</a></li>
-    <li><a class="dropdown-item" href="fabrication.html">Solar Structure Fabrication</a></li>
-  </ul>
+ <ul class="dropdown-menu" aria-labelledby="dropdownMenu">
+              <li><a class="dropdown-item" href="services.html">Smart Energy Services</a></li>
+              <li><a class="dropdown-item" href="solarservice.html">Solar Services</a></li>
+              <li><a class="dropdown-item" href="fabrication.html">Solar Structure Fabrication</a></li>
+            </ul>
 </li>
 
         <li class="nav-item">
@@ -194,34 +194,30 @@
     <p class="subtitle">SEND US EMAIL</p>
     <h2>Let’s discuss a project</h2>
 <form action="https://formsubmit.co/sksolardgl@gmail.com" method="POST">
-  <!-- Optional: Disable CAPTCHA -->
   <input type="hidden" name="_captcha" value="false">
-  
-  <!-- Optional: Set email subject -->
-  <input type="hidden" name="_subject" value="New Service Inquiry from Website">
+  <input type="hidden" name="_subject" value="New Service Inquiry from SK Solar Website">
+  <input type="hidden" name="_next" value="https://sksolar.in/thankyou.html">
 
-  <!-- Optional: Redirect after submission -->
-  <input type="hidden" name="_next" value="https://yourdomain.com/pages/thankyou.html">
-  
-  <input type="text" name="name" placeholder="Enter Name" required>
-  <input type="email" name="email" placeholder="samplename@gmail.com" required>
-  <input type="tel" name="phone" placeholder="Phone no" required>
-  
-  <select name="service" required class="service-select">
+  <input type="text" name="name" required placeholder="Your Name">
+
+  <input type="email" name="email" required placeholder="Email">
+
+  <input type="tel" name="phone" required placeholder="Phone Number">
+
+  <select name="service" required>
     <option value="">Choose Service</option>
-    <option>Solar Installation</option>
-    <option>After sale service</option>
-    <option>AMC – Annual Maintenance</option>
-    <option>Solar Power Plants</option>
-    <option>Solar Service</option>
-    <option>Solar structure fabrication</option>
+    <option value="Solar Installation">Solar Installation</option>
+    <option value="After Sale Service">After Sale Service</option>
+    <option value="AMC – Annual Maintenance">AMC – Annual Maintenance</option>
+    <option value="Solar Power Plants">Solar Power Plants</option>
+    <option value="Solar Service">Solar Service</option>
+    <option value="Solar Structure Fabrication">Solar Structure Fabrication</option>
   </select>
-  
-  <textarea name="message" placeholder="Text Here..." required rows="5"></textarea>
-  
+
+  <textarea name="message" required placeholder="Your Message"></textarea>
+
   <button type="submit" class="button">Send Us Mail</button>
 </form>
-
 
     
   </div>

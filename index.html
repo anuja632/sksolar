@@ -100,8 +100,8 @@
               Our Services
             </a>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenu">
-              <li><a class="dropdown-item" href="services.html">Smart Energy Service</a></li>
-              <li><a class="dropdown-item" href="solarservice.html">Solar Service</a></li>
+              <li><a class="dropdown-item" href="services.html">Smart Energy Services</a></li>
+              <li><a class="dropdown-item" href="solarservice.html">Solar Services</a></li>
               <li><a class="dropdown-item" href="fabrication.html">Solar Structure Fabrication</a></li>
             </ul>
           </li>
@@ -116,9 +116,21 @@
   <!-- Carousel Section -->
   <section class="p-0">
     <div class="energy-carousel owl-carousel owl-theme w-100">
-
+      
       <!-- Slide 1 -->
-      <div class="item slide"  loading="lazy" style="background-image: url('css/images/banner1.png');">
+      <!-- <div class="item slide"  loading="lazy" style="background-image: url('css/images/banner1.png');">
+        <div class="container">
+          <div class="content">
+            <h1>Power Your Future with the Sun</h1>
+            <p>Say goodbye to high electricity bills. We design tailor-made solar power solutions for homes, farms, and commercial spaces.</p>
+            <div class="aa">
+              <a href="contact.html" class="btn primary">Get a Free Quote</a>
+              <a href="about.html" class="btn secondary">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div> -->
+      <div class="item slide"  loading="lazy" style="background-image: url('css/images/banner1.jpg'); width: 100%;">
         <div class="container">
           <div class="content">
             <h1>Power Your Future with the Sun</h1>
@@ -130,7 +142,6 @@
           </div>
         </div>
       </div>
-
       <!-- Slide 2 -->
       <div class="item slide"  loading="lazy" style="background-image: url('css/images/banner2.jpg');">
         <div class="container">
@@ -161,15 +172,22 @@
 
     </div>
 
+<div class="custom-nav">
+  <button class="owl-prev slider-arrow"><i class="fas fa-chevron-left"></i></button>
+  <button class="owl-next slider-arrow"><i class="fas fa-chevron-right"></i></button>
+</div>
+
+
     <!-- Navigation Buttons -->
-    <div class="owl-nav">
-      <button type="button" role="presentation" class="owl-prev">
+     
+    <!-- <div class="owl-nav">
+      <button type="button"  class="owl-prev">
         <i class="fas fa-chevron-left"></i>
       </button>
-      <button type="button" role="presentation" class="owl-next">
+      <button type="button"  class="owl-next">
         <i class="fas fa-chevron-right"></i>
       </button>
-    </div>
+    </div> -->
   </section>
 
   
@@ -668,30 +686,32 @@
 </script>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    var swiper = new Swiper(".mySwiper", {
-      loop: true,
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
+document.addEventListener("DOMContentLoaded", function () {
+  // Swiper initialization (already present)
+  var swiper = new Swiper(".mySwiper", {
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    slidesPerView: 1,
+    spaceBetween: 30,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
       },
-      slidesPerView: 1,
-      spaceBetween: 30,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-
-      breakpoints: {
-        768: {
-          slidesPerView: 2,
-        },
-        1024: {
-          slidesPerView: 3,
-        }
+      1024: {
+        slidesPerView: 3,
       }
-    });
+    }
   });
+
+ 
+});
 
   
 // Get the button
@@ -782,6 +802,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // On scroll
     window.addEventListener('scroll', handleScroll);
   });
+  
 </script>
 
 
